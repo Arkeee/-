@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "FiraSans";
+  src: url(../../fonts/FiraSans/FiraSans-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  src: url(../../fonts/FiraSans/FiraSans-Light.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  src: url(../../fonts/FiraSans/FiraSans-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  src: url(../../fonts/FiraSans/FiraSans-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin fira($style: bold) {
+  @if $style == bold {
+    font-family: "FiraSans";
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @if $style == light {
+    font-family: "FiraSans";
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @if $style == medium {
+    font-family: "FiraSans";
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @if $style == regular {
+    font-family: "FiraSans";
+    font-weight: 400;
+    font-style: normal;
+  }
+}

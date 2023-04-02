@@ -1,0 +1,68 @@
+.intro {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "FiraSans";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.intro__img {
+    display: block;
+}
+
+.intro__avatar {
+    height: rem(140px);
+    width: rem(140px);
+    border-width: rem(1px);
+    border-color: rgb(215, 215, 215);
+    border-style: solid;
+    border-color: rgb(190, 190, 190);
+    border-radius: 50%;
+    background-color: rgb(246, 246, 246);
+    position: absolute;
+    margin: 0 auto;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.intro__name {
+    display: block;
+    background-color: #ffffff;
+    color: #8d8d8d;
+    font-size: rem(21px);
+    padding: rem(90px) rem(87px) rem(20px);
+    border-radius: rem(10px) rem(10px) rem(0px) rem(0px);
+    box-shadow: rem(0px) rem(2px) rem(0px) rgba(0, 0, 0, 0.3)
+}
+
+.intro__link {
+    display: block;
+    background-color: #33c1e3;
+    padding: rem(19px) rem(81px);
+    border-radius: 0 0 rem(10px) rem(10px);
+    box-shadow: 0 rem(2px) rem(2px) rgba(0, 0, 0, 0.3)
+}
+
+.btn {
+    display: block;
+    color: #fff;
+    font-size: rem(14px);
+    border: rem(2px) solid white;
+    padding: rem(14px) rem(14px);
+    border-radius: rem(30px);
+    font-weight: bold;
+
+    @include phone {
+        font-size: 2vmin;
+    }
+}
+
+.btn:hover {
+    background-color: white;
+    color: #33c1e3;
+}

@@ -1,0 +1,73 @@
+.aside {
+  width: 23.4%;
+  float: left;
+
+  @include tablet {
+    float: none;
+    width: 100%;
+  }
+}
+
+.nav__list-item {
+  @include tablet {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.nav__link {
+  font-family: "FiraSans";
+  font-size: rem(18px);
+  color: #414141;
+  text-decoration: none;
+  font-weight: 400;
+  font-style: normal;
+  display: block;
+  padding-top: rem(17px);
+  padding-bottom: rem(17px);
+  text-align: right;
+  padding-right: rem(25px);
+
+  @include laptop {
+    font-size: 1.09rem;
+  }
+
+  @include tablet {
+    text-align: left;
+  }
+
+  @include phone {
+    text-align: left;
+    padding-right: rem(20px);
+  }
+}
+
+.nav__link--active {
+  border-right: rem(6px) solid #33c1e3;
+  display: block;
+  color: #33c1e3;
+  cursor: default;
+  font-weight: bold;
+
+  @include tablet {
+    border-right: none;
+  }
+}
+
+.nav__link:hover {
+  color: #33c1e3;
+}
+
+.nav__title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav__icon {
+  display: inline-block;
+  vertical-align: top;
+
+  @include phone {
+    display: none;
+  }
+}

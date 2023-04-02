@@ -1,0 +1,229 @@
+.title {
+    &--career {
+        margin-left: 3%;
+    }
+
+    @include tablet {
+        margin-left: 0;
+    }
+
+    @include phone {
+        text-align: center;
+    }
+}
+
+.career__left, .career__right {
+    float: left;
+
+    @include phone {
+        float: none;
+    }
+}
+
+.career__left {
+    width: 30%;
+    margin-right: 3%;
+    margin-left: 3%;
+
+    @include tablet {
+        margin-left: 0;
+        margin-right: 6%;
+    }
+
+    @include phone {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.career__right {
+    width: 64%;
+
+    @include phone {
+        width: 100%;
+    }
+}
+
+.career__photo {
+    background: url(../../img/career.png) center;
+    width: rem(220px);
+    height: rem(220px);
+    background-repeat: no-repeat;
+    border-radius: rem(10px);
+    background-position: -93px 0px;
+
+    @include laptop {
+        width: 11.75rem;
+        height: 11.75rem;
+    }
+
+    @include tablet {
+        width: 9.75rem;
+        height: 9.75rem;
+        background-position: -122px -27px;
+    }
+
+    @include phone {
+        display: inline-block;
+        background: url(../../img/career.png);
+        width: rem(220px);
+        height: rem(220px);
+        background-repeat: no-repeat;
+        border-radius: rem(10px);
+        background-position: -93px 0px;
+        margin-bottom: rem(20px);
+    }
+}
+
+.career__item {
+    text-align: right;
+    display: block;
+
+    &:first-child {
+        .career__block {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    &:last-child {
+        .career__block {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    @include phone {
+        text-align: center;
+    }
+}
+
+.career__block {
+    display: inline-block;
+    background: #fff;
+    padding: rem(20px) rem(20px);
+    width: rem(380px);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    margin-bottom: rem(18px);
+    border-radius: rem(10px);
+    line-height: rem(26px);
+    position: relative;
+    text-align: left;
+
+    &::before, &::after {
+        content: "";
+        display: block;
+        width: rem(1px);
+        background: #dddddd;
+        position: absolute;
+        left: rem(-20px);
+
+        @include phone {
+            display: none;
+        }
+    }
+
+    &::before {
+        top: 0;
+        bottom: 50%;
+        margin-bottom: rem(10px);
+
+        @include phone {
+            display: none;
+        }
+    }
+
+    &::after {
+        top: 50%;
+        bottom: rem(-18px);
+        margin-top: rem(10px);
+
+        @include phone {
+            display: none;
+        }
+    }
+
+    &:hover {
+        background-color: $blue;
+        cursor: pointer;
+        transition: 0.3s;
+
+        .career__year {
+            font-size: rem(18px);
+            @include fira(bold);
+            color: #33c1e3;
+
+            &::after {
+                margin-top: rem(-10px);
+                right: rem(-23px);
+                border: rem(5px) solid #94e0f2;
+
+                @include phone {
+                    display: none;
+                }
+            }
+        }
+
+        .career__title, .career__place, .career__age {
+            color:#fff;
+        }
+    }
+
+    @include laptop {
+        width: 19.75rem;
+    }
+
+    @include tablet {
+        width: 18.75rem;
+    }
+
+    @include phone {
+        width: 23.75rem;
+    }
+}
+
+.career__title {
+    @include fira(regular);
+    font-size: rem(21px);
+    color: #5a5a5a;
+}
+
+.career__place, .career__age {
+    @include fira(light);
+    font-size: rem(18px);
+    color: #727272;
+}
+
+.career__year {
+    @include fira(light);
+    font-size: rem(14px);
+    color: #727272;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    line-height: rem(26px);
+    margin-top: rem(-13px);
+    margin-right: rem(32px);
+
+    @include phone {
+        display: none;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: rem(10px);
+        height: rem(10px);
+        background: $blue;
+        border-radius: 50%;
+        right: rem(-18px);
+        top: 50%;
+        margin-top: rem(-5px);
+        z-index: 1;
+
+    @include phone {
+        display: none;
+    }
+    }
+}
